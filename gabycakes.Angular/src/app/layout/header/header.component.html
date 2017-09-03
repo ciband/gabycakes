@@ -1,0 +1,34 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/"><img src="assets/logo.png" alt="GabyCakes"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li *ngFor="let taxon of taxonList" class="">
+          <a (click)="selectTaxon(taxon)" href="javascript:void(0)">{{taxon.name}}
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
+
+      <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
+
+      <div class="desktop-query">
+        <input placeholder="Search" class="desktop-searchBar">
+        <a class="desktop-submit">
+          <span class="web-sprite desktop-iconSearch sprites-search"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

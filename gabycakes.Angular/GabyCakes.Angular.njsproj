@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{96189b26-bb27-4c8c-8ebc-a7de5ae639d4}</ProjectGuid>
+        <ProjectHome />
+        <ProjectView>ShowAllFiles</ProjectView>
+        <StartupFile>karma.conf.js</StartupFile>
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+        <TypeScriptSourceMap>true</TypeScriptSourceMap>
+        <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+        <EnableTypeScript>true</EnableTypeScript>
+        <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include=".angular-cli.json" />
+        <Content Include="database.rules.json" />
+        <Content Include="firebase.json" />
+        <Content Include="package.json" />
+        <Content Include="tsconfig.json" />
+        <Content Include="tslint.json" />
+        <Content Include="CODE_OF_CONDUCT.md" />
+        <Content Include="contributors.md" />
+        <Content Include="README.md" />
+        <Compile Include="karma.conf.js" />
+        <Compile Include="protractor.conf.js" />
+        <Compile Include="sw-precache-config.js" />
+        <Content Include="docs\coverage.html" />
+        <Content Include="docs\index.html" />
+        <Content Include="docs\miscellaneous.html" />
+        <Content Include="docs\modules.html" />
+        <Content Include="docs\overview.html" />
+        <Content Include="docs\routes.html" />
+        <Content Include="docs\search_index.json" />
+        <Content Include="e2e\tsconfig.e2e.json" />
+        <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
+        <TypeScriptCompile Include="e2e\app.po.ts" />
+        <Content Include="src\index.html" />
+        <Content Include="src\favicon.ico" />
+        <Content Include="src\manifest.json" />
+        <Content Include="src\tsconfig.app.json" />
+        <Content Include="src\tsconfig.spec.json" />
+        <TypeScriptCompile Include="src\main.ts" />
+        <TypeScriptCompile Include="src\polyfills.ts" />
+        <TypeScriptCompile Include="src\test.ts" />
+        <TypeScriptCompile Include="src\typings.d.ts" />
+        <Compile Include="src\service-worker.js" />
+        <Content Include="docs\classes\Address.html" />
+        <Content Include="docs\classes\AuthActions.html" />
+        <Content Include="docs\classes\CheckoutActions.html" />
+        <Content Include="docs\classes\Classification.html" />
+        <Content Include="docs\classes\Image.html" />
+        <Content Include="docs\classes\LightOrder.html" />
+        <Content Include="docs\classes\LineItem.html" />
+        <Content Include="docs\classes\OptionType.html" />
+        <Content Include="docs\classes\OptionValue.html" />
+        <Content Include="docs\classes\Order.html" />
+        <Content Include="docs\classes\Payment.html" />
+        <Content Include="docs\classes\PaymentMode.html" />
+        <Content Include="docs\classes\Product.html" />
+        <Content Include="docs\classes\ProductActions.html" />
+        <Content Include="docs\classes\ProductProperty.html" />
+        <Content Include="docs\classes\SearchActions.html" />
+        <Content Include="docs\classes\Taxon.html" />
+        <Content Include="docs\classes\UserActions.html" />
+        <Content Include="docs\classes\User.html" />
+        <Content Include="docs\classes\Variant.html" />
+        <Content Include="docs\components\AddAddressComponent.html" />
+        <Content Include="docs\components\AddressComponent.html" />
+        <Content Include="docs\components\AddressesComponent.html" />
+        <Content Include="docs\components\AppComponent.html" />
+        <Content Include="docs\components\BreadcrumbComponent.html" />
+        <Content Include="docs\components\CartComponent.html" />
+        <Content Include="docs\components\CashOnDeliveryComponent.html" />
+        <Content Include="docs\components\CheckoutFooterComponent.html" />
+        <Content Include="docs\components\CheckoutHeaderComponent.html" />
+        <Content Include="docs\components\ContentComponent.html" />
+        <Content Include="docs\components\ContentHeaderComponent.html" />
+        <Content Include="docs\components\CreditCardComponent.html" />
+        <Content Include="docs\components\CustomizeComponent.html" />
+        <Content Include="docs\components\DeliveryAddressComponent.html" />
+        <Content Include="docs\components\DeliveryOptionsComponent.html" />
+        <Content Include="docs\components\EmptyCartComponent.html" />
+        <Content Include="docs\components\FilterComponent.html" />
+        <Content Include="docs\components\FilterSummaryComponent.html" />
+        <Content Include="docs\components\FooterComponent.html" />
+        <Content Include="docs\components\HeaderComponent.html" />
+        <Content Include="docs\components\HomeComponent.html" />
+        <Content Include="docs\components\LineItemComponent.html" />
+        <Content Include="docs\components\LineItemListComponent.html" />
+        <Content Include="docs\components\LoadingIndicatorComponent.html" />
+        <Content Include="docs\components\LoginComponent.html" />
+        <Content Include="docs\components\NetBankingComponent.html" />
+        <Content Include="docs\components\NotificationComponent.html" />
+        <Content Include="docs\components\OrderDetailComponent.html" />
+        <Content Include="docs\components\OrderListItemComponent.html" />
+        <Content Include="docs\components\OrdersComponent.html" />
+        <Content Include="docs\components\OrderTotalSummaryComponent.html" />
+        <Content Include="docs\components\OverviewComponent.html" />
+        <Content Include="docs\components\PaymentComponent.html" />
+        <Content Include="docs\components\PaymentModeComponent.html" />
+        <Content Include="docs\components\PaymentModesListComponent.html" />
+        <Content Include="docs\components\ProductPriceInfoComponent.html" />
+        <Content Include="docs\components\ProductVariantsComponent.html" />
+        <Content Include="docs\components\ProductListComponent.html" />
+        <Content Include="docs\components\ProductImagesComponent.html" />
+        <Content Include="docs\components\ProductListItemComponent.html" />
+        <Content Include="docs\components\ProductComponent.html" />
+        <Content Include="docs\components\ProductDescriptionComponent.html" />
+        <Content Include="docs\components\ProductDetailPageComponent.html" />
+        <Content Include="docs\components\ProductDetailsComponent.html" />
+        <Content Include="docs\components\ProfileDropdownComponent.html" />
+        <Content Include="docs\components\ReturnListItemComponent.html" />
+        <Content Include="docs\components\ReturnsComponent.html" />
+        <Content Include="docs\components\SignUpComponent.html" />
+        <Content Include="docs\components\TaxonsComponent.html" />
+        <Content Include="docs\components\UserComponent.html" />
+        <Content Include="docs\fonts\fontawesome-webfont.svg" />
+        <Content Include="docs\fonts\roboto-v15-latin-300.svg" />
+        <Content Include="docs\fonts\roboto-v15-latin-700.svg" />
+        <Content Include="docs\fonts\roboto-v15-latin-regular.svg" />
+        <Content Include="docs\graph\dependencies.svg" />
+        <Content Include="docs\images\compodoc.png" />
+        <Content Include="docs\images\favicon.ico" />
+        <Content Include="docs\images\compodoc-vectorise-inverted.svg" />
+        <Content Include="docs\images\compodoc-vectorise.svg" />
+        <Content Include="docs\images\compodoc.svg" />
+        <Content Include="docs\images\coverage-badge.svg" />
+        <Content Include="docs\injectables\AddressService.html" />
+        <Content Include="docs\injectables\AuthenticationEffects.html" />
+        <Content Include="docs\injectables\AuthService.html" />
+        <Content Include="docs\injectables\CanActivateViaAuthGuard.html" />
+        <Content Include="docs\injectables\CheckoutEffects.html" />
+        <Content Include="docs\injectables\CheckoutService.html" />
+        <Content Include="docs\injectables\FilterPipe.html" />
+        <Content Include="docs\injectables\HttpService.html" />
+        <Content Include="docs\injectables\PaymentService.html" />
+        <Content Include="docs\injectables\ProductEffects.html" />
+        <Content Include="docs\injectables\ProductService.html" />
+        <Content Include="docs\injectables\UserEffects.html" />
+        <Content Include="docs\injectables\UserService.html" />
+        <Content Include="docs\injectables\VariantParserService.html" />
+        <Content Include="docs\injectables\VariantRetriverService.html" />
+        <Content Include="docs\interfaces\AppState.html" />
+        <Content Include="docs\interfaces\AuthState.html" />
+        <Content Include="docs\interfaces\CheckoutState.html" />
+        <Content Include="docs\interfaces\CurrentSelectedOptionsType.html" />
+        <Content Include="docs\interfaces\OptionTypesHash.html" />
+        <Content Include="docs\interfaces\ProductState.html" />
+        <Content Include="docs\interfaces\SearchState.html" />
+        <Content Include="docs\interfaces\Taxonomy.html" />
+        <Content Include="docs\interfaces\UserState.html" />
+        <Compile Include="docs\js\compodoc.js" />
+        <Compile Include="docs\js\menu.js" />
+        <Compile Include="docs\js\routes.js" />
+        <Compile Include="docs\js\sourceCode.js" />
+        <Compile Include="docs\js\svg-pan-zoom.controls.js" />
+        <Compile Include="docs\js\tabs.js" />
+        <Compile Include="docs\js\tree.js" />
+        <Content Include="docs\modules\AddressModule.html" />
+        <Content Include="docs\modules\AppModule.html" />
+        <Content Include="docs\modules\AuthModule.html" />
+        <Content Include="docs\modules\CartModule.html" />
+        <Content Include="docs\modules\CheckoutModule.html" />
+        <Content Include="docs\modules\CoreModule.html" />
+        <Content Include="docs\modules\HomeModule.html" />
+        <Content Include="docs\modules\LayoutModule.html" />
+        <Content Include="docs\modules\PaymentModule.html" />
+        <Content Include="docs\modules\ProductModule.html" />
+        <Content Include="docs\modules\SharedModule.html" />
+        <Content Include="docs\modules\UserModule.html" />
+        <Content Include="docs\pipes\FilterPipe.html" />
+        <Content Include="docs\pipes\HumanizePipe.html" />
+        <Content Include="docs\pipes\KeysPipe.html" />
+        <Content Include="docs\styles\bootstrap-card.css" />
+        <Content Include="docs\styles\bootstrap.min.css" />
+        <Content Include="docs\styles\compodoc.css" />
+        <Content Include="docs\styles\font-awesome.min.css" />
+        <Content Include="docs\styles\laravel.css" />
+        <Content Include="docs\styles\monokai-sublime.css" />
+        <Content Include="docs\styles\original.css" />
+        <Content Include="docs\styles\postmark.css" />
+        <Content Include="docs\styles\prism.css" />
+        <Content Include="docs\styles\readthedocs.css" />
+        <Content Include="docs\styles\reset.css" />
+        <Content Include="docs\styles\stripe.css" />
+        <Content Include="docs\styles\style.css" />
+        <Content Include="docs\styles\vagrant.css" />
+        <Compile Include="docs\js\libs\bootstrap-native.js" />
+        <Compile Include="docs\js\libs\d3.v3.min.js" />
+        <Compile Include="docs\js\libs\deep-iterator.js" />
+        <Compile Include="docs\js\libs\es6-shim.min.js" />
+        <Compile Include="docs\js\libs\EventDispatcher.js" />
+        <Compile Include="docs\js\libs\highlight.pack.js" />
+        <Compile Include="docs\js\libs\htmlparser.js" />
+        <Compile Include="docs\js\libs\prism.js" />
+        <Compile Include="docs\js\libs\promise.min.js" />
+        <Compile Include="docs\js\libs\svg-pan-zoom.min.js" />
+        <Compile Include="docs\js\libs\vis.min.js" />
+        <Compile Include="docs\js\libs\zepto.min.js" />
+        <Compile Include="docs\js\search\lunr.min.js" />
+        <Compile Include="docs\js\search\search-engine.js" />
+        <Compile Include="docs\js\search\search-lunr.js" />
+        <Compile Include="docs\js\search\search.js" />
+        <Compile Include="docs\js\search\search_index.js" />
+        <Content Include="docs\modules\AddressModule\dependencies.svg" />
+        <Content Include="docs\modules\AppModule\dependencies.svg" />
+        <Content Include="docs\modules\AuthModule\dependencies.svg" />
+        <Content Include="docs\modules\CartModule\dependencies.svg" />
+        <Content Include="docs\modules\CheckoutModule\dependencies.svg" />
+        <Content Include="docs\modules\CoreModule\dependencies.svg" />
+        <Content Include="docs\modules\HomeModule\dependencies.svg" />
+        <Content Include="docs\modules\LayoutModule\dependencies.svg" />
+        <Content Include="docs\modules\PaymentModule\dependencies.svg" />
+        <Content Include="docs\modules\ProductModule\dependencies.svg" />
+        <Content Include="docs\modules\SharedModule\dependencies.svg" />
+        <Content Include="docs\modules\UserModule\dependencies.svg" />
+        <Content Include="src\app\app.component.html" />
+        <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\app.component.ts" />
+        <TypeScriptCompile Include="src\app\app.module.ts" />
+        <TypeScriptCompile Include="src\app\app.reducers.ts" />
+        <TypeScriptCompile Include="src\app\app.routes.ts" />
+        <TypeScriptCompile Include="src\app\interfaces.ts" />
+        <Content Include="src\assets\checkout_sprite.png" />
+        <Content Include="src\assets\comingsoon.png" />
+        <Content Include="src\assets\logo.png" />
+        <Content Include="src\assets\search-sprite.d5ab50f1b815dfaf3976c6ce2e19d24670e5ba0b.png" />
+        <Content Include="src\assets\shoppingbag.png" />
+        <Content Include="src\assets\loader.gif" />
+        <TypeScriptCompile Include="src\environments\environment.mock.ts" />
+        <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+        <TypeScriptCompile Include="src\environments\environment.ts" />
+        <TypeScriptCompile Include="src\app\auth\auth.module.ts" />
+        <TypeScriptCompile Include="src\app\auth\auth.routes.ts" />
+        <TypeScriptCompile Include="src\app\checkout\checkout.module.ts" />
+        <TypeScriptCompile Include="src\app\checkout\checkout.routes.ts" />
+        <TypeScriptCompile Include="src\app\core\index.ts" />
+        <TypeScriptCompile Include="src\app\home\home.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\home\home.component.ts" />
+        <TypeScriptCompile Include="src\app\home\home.routes.ts" />
+        <TypeScriptCompile Include="src\app\home\index.ts" />
+        <TypeScriptCompile Include="src\app\layout\index.ts" />
+        <Content Include="src\app\product\product.component.html" />
+        <Content Include="src\app\product\product.component.css" />
+        <TypeScriptCompile Include="src\app\product\index.ts" />
+        <TypeScriptCompile Include="src\app\product\product.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\product\product.component.ts" />
+        <TypeScriptCompile Include="src\app\product\product.routes.ts" />
+        <TypeScriptCompile Include="src\app\shared\index.ts" />
+        <Content Include="src\app\user\user.component.html" />
+        <TypeScriptCompile Include="src\app\user\index.ts" />
+        <TypeScriptCompile Include="src\app\user\user.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\user\user.component.ts" />
+        <TypeScriptCompile Include="src\app\user\user.routes.ts" />
+        <TypeScriptCompile Include="src\app\auth\actions\auth.actions.ts" />
+        <TypeScriptCompile Include="src\app\auth\effects\auth.effects.ts" />
+        <TypeScriptCompile Include="src\app\auth\reducers\auth.reducer.ts" />
+        <TypeScriptCompile Include="src\app\auth\reducers\auth.state.ts" />
+        <TypeScriptCompile Include="src\app\auth\reducers\selectors.ts" />
+        <Content Include="src\app\auth\components\login\login.component.html" />
+        <TypeScriptCompile Include="src\app\auth\components\login\login.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\auth\components\login\login.component.ts" />
+        <Content Include="src\app\auth\components\sign-up\sign-up.component.html" />
+        <TypeScriptCompile Include="src\app\auth\components\sign-up\sign-up.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\auth\components\sign-up\sign-up.component.ts" />
+        <TypeScriptCompile Include="src\app\checkout\actions\checkout.actions.ts" />
+        <Content Include="src\app\checkout\address\address.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\address\address.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\address\address.component.ts" />
+        <TypeScriptCompile Include="src\app\checkout\address\address.module.ts" />
+        <Content Include="src\app\checkout\cart\cart.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\cart\cart.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\cart\cart.component.ts" />
+        <TypeScriptCompile Include="src\app\checkout\cart\cart.module.ts" />
+        <TypeScriptCompile Include="src\app\checkout\effects\checkout.effects.ts" />
+        <Content Include="src\app\checkout\payment\payment.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment.component.ts" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment.module.ts" />
+        <TypeScriptCompile Include="src\app\checkout\reducers\checkout.reducer.ts" />
+        <TypeScriptCompile Include="src\app\checkout\reducers\checkout.state.ts" />
+        <TypeScriptCompile Include="src\app\checkout\reducers\selectors.ts" />
+        <Content Include="src\app\checkout\address\add-address\add-address.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\address\add-address\add-address.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\address\add-address\add-address.component.ts" />
+        <Content Include="src\app\checkout\address\delivery-address\delivery-address.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\address\delivery-address\delivery-address.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\address\delivery-address\delivery-address.component.ts" />
+        <Content Include="src\app\checkout\address\delivery-options\delivery-options.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\address\delivery-options\delivery-options.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\address\delivery-options\delivery-options.component.ts" />
+        <TypeScriptCompile Include="src\app\checkout\address\services\address.service.ts" />
+        <Content Include="src\app\checkout\cart\components\empty-cart\empty-cart.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\cart\components\empty-cart\empty-cart.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\cart\components\empty-cart\empty-cart.component.ts" />
+        <Content Include="src\app\checkout\cart\components\line-item-list\line-item-list.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\cart\components\line-item-list\line-item-list.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\cart\components\line-item-list\line-item-list.component.ts" />
+        <Content Include="src\app\checkout\cart\components\order-total-summary\order-total-summary.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\cart\components\order-total-summary\order-total-summary.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\cart\components\order-total-summary\order-total-summary.component.ts" />
+        <Content Include="src\app\checkout\cart\components\line-item-list\line-item\line-item.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\cart\components\line-item-list\line-item\line-item.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\cart\components\line-item-list\line-item\line-item.component.ts" />
+        <Content Include="src\app\checkout\payment\payment-modes-list\payment-modes-list.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\payment-modes-list.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\payment-modes-list.component.ts" />
+        <TypeScriptCompile Include="src\app\checkout\payment\services\payment.service.ts" />
+        <Content Include="src\app\checkout\payment\payment-modes-list\cash-on-delivery\cash-on-delivery.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\cash-on-delivery\cash-on-delivery.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\cash-on-delivery\cash-on-delivery.component.ts" />
+        <Content Include="src\app\checkout\payment\payment-modes-list\credit-card\credit-card.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\credit-card\credit-card.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\credit-card\credit-card.component.ts" />
+        <Content Include="src\app\checkout\payment\payment-modes-list\net-banking\net-banking.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\net-banking\net-banking.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\net-banking\net-banking.component.ts" />
+        <Content Include="src\app\checkout\payment\payment-modes-list\payment-mode\payment-mode.component.html" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\payment-mode\payment-mode.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\checkout\payment\payment-modes-list\payment-mode\payment-mode.component.ts" />
+        <TypeScriptCompile Include="src\app\core\guards\auth.guard.ts" />
+        <TypeScriptCompile Include="src\app\core\models\address.ts" />
+        <TypeScriptCompile Include="src\app\core\models\classification.ts" />
+        <TypeScriptCompile Include="src\app\core\models\image.ts" />
+        <TypeScriptCompile Include="src\app\core\models\line_item.ts" />
+        <TypeScriptCompile Include="src\app\core\models\option_type.ts" />
+        <TypeScriptCompile Include="src\app\core\models\option_value.ts" />
+        <TypeScriptCompile Include="src\app\core\models\order.ts" />
+        <TypeScriptCompile Include="src\app\core\models\payment.ts" />
+        <TypeScriptCompile Include="src\app\core\models\payment_mode.ts" />
+        <TypeScriptCompile Include="src\app\core\models\product.ts" />
+        <TypeScriptCompile Include="src\app\core\models\product_property.ts" />
+        <TypeScriptCompile Include="src\app\core\models\taxon.ts" />
+        <TypeScriptCompile Include="src\app\core\models\taxonomy.ts" />
+        <TypeScriptCompile Include="src\app\core\models\user.ts" />
+        <TypeScriptCompile Include="src\app\core\models\variant.ts" />
+        <TypeScriptCompile Include="src\app\core\pipes\humanize.pipe.ts" />
+        <TypeScriptCompile Include="src\app\core\services\auth.service.spec.ts" />
+        <TypeScriptCompile Include="src\app\core\services\auth.service.ts" />
+        <TypeScriptCompile Include="src\app\core\services\checkout.service.ts" />
+        <TypeScriptCompile Include="src\app\core\services\http.ts" />
+        <TypeScriptCompile Include="src\app\core\services\product-dummy.service.ts" />
+        <TypeScriptCompile Include="src\app\core\services\product.service.ts" />
+        <TypeScriptCompile Include="src\app\core\services\variant-parser.service.ts" />
+        <TypeScriptCompile Include="src\app\core\services\variant-retriver.service.ts" />
+        <TypeScriptCompile Include="src\app\home\content\content.ts" />
+        <TypeScriptCompile Include="src\app\home\reducers\search.actions.ts" />
+        <TypeScriptCompile Include="src\app\home\reducers\search.reducers.ts" />
+        <TypeScriptCompile Include="src\app\home\reducers\search.state.ts" />
+        <TypeScriptCompile Include="src\app\home\reducers\selectors.ts" />
+        <Content Include="src\app\home\breadcrumb\components\breadcrumb\breadcrumb.component.html" />
+        <TypeScriptCompile Include="src\app\home\breadcrumb\components\breadcrumb\breadcrumb.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\home\breadcrumb\components\breadcrumb\breadcrumb.component.ts" />
+        <Content Include="src\app\home\content\content-header\content-header.component.html" />
+        <TypeScriptCompile Include="src\app\home\content\content-header\content-header.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\home\content\content-header\content-header.component.ts" />
+        <Content Include="src\app\home\content\customize\customize.component.html" />
+        <TypeScriptCompile Include="src\app\home\content\customize\customize.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\home\content\customize\customize.component.ts" />
+        <Content Include="src\app\home\content\filter-summary\filter-summary.component.html" />
+        <TypeScriptCompile Include="src\app\home\content\filter-summary\filter-summary.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\home\content\filter-summary\filter-summary.component.ts" />
+        <Content Include="src\app\home\content\product-list\product-list.component.html" />
+        <TypeScriptCompile Include="src\app\home\content\product-list\product-filter.pipe.ts" />
+        <TypeScriptCompile Include="src\app\home\content\product-list\product-list.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\home\content\product-list\product-list.component.ts" />
+        <Content Include="src\app\home\content\product-list\product-list-item\product-list-item.component.html" />
+        <TypeScriptCompile Include="src\app\home\content\product-list\product-list-item\product-list-item.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\home\content\product-list\product-list-item\product-list-item.component.ts" />
+        <Content Include="src\app\home\sidebar\filter\filter.component.html" />
+        <TypeScriptCompile Include="src\app\home\sidebar\filter\filter.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\home\sidebar\filter\filter.component.ts" />
+        <Content Include="src\app\home\sidebar\taxons\taxons.component.html" />
+        <TypeScriptCompile Include="src\app\home\sidebar\taxons\taxons.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\home\sidebar\taxons\taxons.component.ts" />
+        <Content Include="src\app\layout\checkout-footer\checkout-footer.component.html" />
+        <TypeScriptCompile Include="src\app\layout\checkout-footer\checkout-footer.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\layout\checkout-footer\checkout-footer.component.ts" />
+        <Content Include="src\app\layout\checkout-header\checkout-header.component.html" />
+        <TypeScriptCompile Include="src\app\layout\checkout-header\checkout-header.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\layout\checkout-header\checkout-header.component.ts" />
+        <Content Include="src\app\layout\footer\footer.component.html" />
+        <TypeScriptCompile Include="src\app\layout\footer\footer.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\layout\footer\footer.component.ts" />
+        <Content Include="src\app\layout\header\header.component.html" />
+        <TypeScriptCompile Include="src\app\layout\header\header.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\layout\header\header.component.ts" />
+        <Content Include="src\app\layout\header\profile-dropdown\profile-dropdown.component.html" />
+        <TypeScriptCompile Include="src\app\layout\header\profile-dropdown\profile-dropdown.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\layout\header\profile-dropdown\profile-dropdown.component.ts" />
+        <TypeScriptCompile Include="src\app\product\actions\product-actions.spec.ts" />
+        <TypeScriptCompile Include="src\app\product\actions\product-actions.ts" />
+        <TypeScriptCompile Include="src\app\product\effects\product.effects.ts" />
+        <TypeScriptCompile Include="src\app\product\reducers\product-reducer.ts" />
+        <TypeScriptCompile Include="src\app\product\reducers\product-state.ts" />
+        <TypeScriptCompile Include="src\app\product\reducers\selectors.ts" />
+        <Content Include="src\app\product\components\product-detail-page\product-detail-page.component.html" />
+        <Content Include="src\app\product\components\product-detail-page\product-detail-page.component.css" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-detail-page.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-detail-page.component.ts" />
+        <Content Include="src\app\product\components\product-detail-page\product-description\product-description.component.html" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-description\product-description.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-description\product-description.component.ts" />
+        <Content Include="src\app\product\components\product-detail-page\product-details\product-details.component.html" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-details\product-details.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-details\product-details.component.ts" />
+        <Content Include="src\app\product\components\product-detail-page\product-images\product-images.component.html" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-images\product-images.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-images\product-images.component.ts" />
+        <Content Include="src\app\product\components\product-detail-page\product-price-info\product-price-info.component.html" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-price-info\product-price-info.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-price-info\product-price-info.component.ts" />
+        <Content Include="src\app\product\components\product-detail-page\product-variants\product-variants.component.html" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-variants\product-variants.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\product\components\product-detail-page\product-variants\product-variants.component.ts" />
+        <TypeScriptCompile Include="src\app\shared\pipes\keys.pipe.ts" />
+        <Content Include="src\app\shared\components\loading-indicator\loading-indicator.component.html" />
+        <TypeScriptCompile Include="src\app\shared\components\loading-indicator\loading-indicator.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\shared\components\loading-indicator\loading-indicator.component.ts" />
+        <Content Include="src\app\shared\components\notification\notification.component.html" />
+        <TypeScriptCompile Include="src\app\shared\components\notification\notification.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\shared\components\notification\notification.component.ts" />
+        <TypeScriptCompile Include="src\app\user\actions\user.actions.ts" />
+        <TypeScriptCompile Include="src\app\user\effects\user.effects.ts" />
+        <TypeScriptCompile Include="src\app\user\reducers\selector.ts" />
+        <TypeScriptCompile Include="src\app\user\reducers\user.reducer.ts" />
+        <TypeScriptCompile Include="src\app\user\reducers\user.state.ts" />
+        <TypeScriptCompile Include="src\app\user\services\user.service.spec.ts" />
+        <TypeScriptCompile Include="src\app\user\services\user.service.ts" />
+        <Content Include="src\app\user\components\addresses\addresses.component.html" />
+        <TypeScriptCompile Include="src\app\user\components\addresses\addresses.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\user\components\addresses\addresses.component.ts" />
+        <Content Include="src\app\user\components\orders\orders.component.html" />
+        <TypeScriptCompile Include="src\app\user\components\orders\orders.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\user\components\orders\orders.component.ts" />
+        <Content Include="src\app\user\components\overview\overview.component.html" />
+        <Content Include="src\app\user\components\overview\overview.component.css" />
+        <TypeScriptCompile Include="src\app\user\components\overview\overview.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\user\components\overview\overview.component.ts" />
+        <Content Include="src\app\user\components\returns\returns.component.html" />
+        <Content Include="src\app\user\components\returns\returns.component.css" />
+        <TypeScriptCompile Include="src\app\user\components\returns\returns.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\user\components\returns\returns.component.ts" />
+        <Content Include="src\app\user\components\orders\order-detail\order-detail.component.html" />
+        <TypeScriptCompile Include="src\app\user\components\orders\order-detail\order-detail.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\user\components\orders\order-detail\order-detail.component.ts" />
+        <Content Include="src\app\user\components\orders\order-list-item\order-list-item.component.html" />
+        <TypeScriptCompile Include="src\app\user\components\orders\order-list-item\order-list-item.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\user\components\orders\order-list-item\order-list-item.component.ts" />
+        <Content Include="src\app\user\components\returns\return-list-item\return-list-item.component.html" />
+        <Content Include="src\app\user\components\returns\return-list-item\return-list-item.component.css" />
+        <TypeScriptCompile Include="src\app\user\components\returns\return-list-item\return-list-item.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\user\components\returns\return-list-item\return-list-item.component.ts" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="docs" />
+        <Folder Include="docs\classes" />
+        <Folder Include="docs\components" />
+        <Folder Include="docs\fonts" />
+        <Folder Include="docs\graph" />
+        <Folder Include="docs\images" />
+        <Folder Include="docs\injectables" />
+        <Folder Include="docs\interfaces" />
+        <Folder Include="docs\js" />
+        <Folder Include="docs\js\libs" />
+        <Folder Include="docs\js\search" />
+        <Folder Include="docs\modules" />
+        <Folder Include="docs\modules\AddressModule" />
+        <Folder Include="docs\modules\AppModule" />
+        <Folder Include="docs\modules\AuthModule" />
+        <Folder Include="docs\modules\CartModule" />
+        <Folder Include="docs\modules\CheckoutModule" />
+        <Folder Include="docs\modules\CoreModule" />
+        <Folder Include="docs\modules\HomeModule" />
+        <Folder Include="docs\modules\LayoutModule" />
+        <Folder Include="docs\modules\PaymentModule" />
+        <Folder Include="docs\modules\ProductModule" />
+        <Folder Include="docs\modules\SharedModule" />
+        <Folder Include="docs\modules\UserModule" />
+        <Folder Include="docs\pipes" />
+        <Folder Include="docs\styles" />
+        <Folder Include="e2e" />
+        <Folder Include="src" />
+        <Folder Include="src\app" />
+        <Folder Include="src\app\auth" />
+        <Folder Include="src\app\auth\actions" />
+        <Folder Include="src\app\auth\components" />
+        <Folder Include="src\app\auth\components\login" />
+        <Folder Include="src\app\auth\components\sign-up" />
+        <Folder Include="src\app\auth\effects" />
+        <Folder Include="src\app\auth\reducers" />
+        <Folder Include="src\app\checkout" />
+        <Folder Include="src\app\checkout\actions" />
+        <Folder Include="src\app\checkout\address" />
+        <Folder Include="src\app\checkout\address\add-address" />
+        <Folder Include="src\app\checkout\address\delivery-address" />
+        <Folder Include="src\app\checkout\address\delivery-options" />
+        <Folder Include="src\app\checkout\address\services" />
+        <Folder Include="src\app\checkout\cart" />
+        <Folder Include="src\app\checkout\cart\components" />
+        <Folder Include="src\app\checkout\cart\components\empty-cart" />
+        <Folder Include="src\app\checkout\cart\components\line-item-list" />
+        <Folder Include="src\app\checkout\cart\components\line-item-list\line-item" />
+        <Folder Include="src\app\checkout\cart\components\order-total-summary" />
+        <Folder Include="src\app\checkout\effects" />
+        <Folder Include="src\app\checkout\payment" />
+        <Folder Include="src\app\checkout\payment\payment-modes-list" />
+        <Folder Include="src\app\checkout\payment\payment-modes-list\cash-on-delivery" />
+        <Folder Include="src\app\checkout\payment\payment-modes-list\credit-card" />
+        <Folder Include="src\app\checkout\payment\payment-modes-list\net-banking" />
+        <Folder Include="src\app\checkout\payment\payment-modes-list\payment-mode" />
+        <Folder Include="src\app\checkout\payment\services" />
+        <Folder Include="src\app\checkout\reducers" />
+        <Folder Include="src\app\core" />
+        <Folder Include="src\app\core\guards" />
+        <Folder Include="src\app\core\models" />
+        <Folder Include="src\app\core\pipes" />
+        <Folder Include="src\app\core\services" />
+        <Folder Include="src\app\home" />
+        <Folder Include="src\app\home\breadcrumb" />
+        <Folder Include="src\app\home\breadcrumb\components" />
+        <Folder Include="src\app\home\breadcrumb\components\breadcrumb" />
+        <Folder Include="src\app\home\content" />
+        <Folder Include="src\app\home\content\content-header" />
+        <Folder Include="src\app\home\content\customize" />
+        <Folder Include="src\app\home\content\filter-summary" />
+        <Folder Include="src\app\home\content\product-list" />
+        <Folder Include="src\app\home\content\product-list\product-list-item" />
+        <Folder Include="src\app\home\reducers" />
+        <Folder Include="src\app\home\sidebar" />
+        <Folder Include="src\app\home\sidebar\filter" />
+        <Folder Include="src\app\home\sidebar\taxons" />
+        <Folder Include="src\app\layout" />
+        <Folder Include="src\app\layout\checkout-footer" />
+        <Folder Include="src\app\layout\checkout-header" />
+        <Folder Include="src\app\layout\footer" />
+        <Folder Include="src\app\layout\header" />
+        <Folder Include="src\app\layout\header\profile-dropdown" />
+        <Folder Include="src\app\product" />
+        <Folder Include="src\app\product\actions" />
+        <Folder Include="src\app\product\components" />
+        <Folder Include="src\app\product\components\product-detail-page" />
+        <Folder Include="src\app\product\components\product-detail-page\product-description" />
+        <Folder Include="src\app\product\components\product-detail-page\product-details" />
+        <Folder Include="src\app\product\components\product-detail-page\product-images" />
+        <Folder Include="src\app\product\components\product-detail-page\product-price-info" />
+        <Folder Include="src\app\product\components\product-detail-page\product-variants" />
+        <Folder Include="src\app\product\effects" />
+        <Folder Include="src\app\product\reducers" />
+        <Folder Include="src\app\shared" />
+        <Folder Include="src\app\shared\components" />
+        <Folder Include="src\app\shared\components\loading-indicator" />
+        <Folder Include="src\app\shared\components\notification" />
+        <Folder Include="src\app\shared\pipes" />
+        <Folder Include="src\app\shared\scss" />
+        <Folder Include="src\app\shared\scss\custom_themes" />
+        <Folder Include="src\app\shared\scss\custom_themes\default" />
+        <Folder Include="src\app\user" />
+        <Folder Include="src\app\user\actions" />
+        <Folder Include="src\app\user\components" />
+        <Folder Include="src\app\user\components\addresses" />
+        <Folder Include="src\app\user\components\orders" />
+        <Folder Include="src\app\user\components\orders\order-detail" />
+        <Folder Include="src\app\user\components\orders\order-list-item" />
+        <Folder Include="src\app\user\components\overview" />
+        <Folder Include="src\app\user\components\returns" />
+        <Folder Include="src\app\user\components\returns\return-list-item" />
+        <Folder Include="src\app\user\effects" />
+        <Folder Include="src\app\user\reducers" />
+        <Folder Include="src\app\user\services" />
+        <Folder Include="src\assets" />
+        <Folder Include="src\environments" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>True</AutoAssignPort>
+              <DevelopmentServerPort>0</DevelopmentServerPort>
+              <DevelopmentServerVPath>/</DevelopmentServerVPath>
+              <IISUrl>http://localhost:48022/</IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+            <WebProjectProperties>
+              <StartPageUrl>
+              </StartPageUrl>
+              <StartAction>CurrentPage</StartAction>
+              <AspNetDebugging>True</AspNetDebugging>
+              <SilverlightDebugging>False</SilverlightDebugging>
+              <NativeDebugging>False</NativeDebugging>
+              <SQLDebugging>False</SQLDebugging>
+              <ExternalProgram>
+              </ExternalProgram>
+              <StartExternalURL>
+              </StartExternalURL>
+              <StartCmdLineArguments>
+              </StartCmdLineArguments>
+              <StartWorkingDirectory>
+              </StartWorkingDirectory>
+              <EnableENC>False</EnableENC>
+              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+</Project>

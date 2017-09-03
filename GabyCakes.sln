@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GabyCakes.API", "GabyCakes.API\GabyCakes.API.csproj", "{A218B4CD-00D3-48EA-A6B4-850791DAFA27}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "GabyCakes.Angular", "gabycakes.Angular\GabyCakes.Angular.njsproj", "{96189B26-BB27-4C8C-8EBC-A7DE5AE639D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A218B4CD-00D3-48EA-A6B4-850791DAFA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A218B4CD-00D3-48EA-A6B4-850791DAFA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A218B4CD-00D3-48EA-A6B4-850791DAFA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A218B4CD-00D3-48EA-A6B4-850791DAFA27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96189B26-BB27-4C8C-8EBC-A7DE5AE639D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96189B26-BB27-4C8C-8EBC-A7DE5AE639D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96189B26-BB27-4C8C-8EBC-A7DE5AE639D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96189B26-BB27-4C8C-8EBC-A7DE5AE639D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {257D9806-50A0-417B-900C-AC2CD9B65E0D}
+	EndGlobalSection
+EndGlobal
