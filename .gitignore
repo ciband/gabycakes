@@ -5,3 +5,4 @@
 /.vs
 /gabycakes.Angular/.vs
 /GabyCakes.API/obj
+/GabyCakes.API/bin/Debug/netcoreapp2.0

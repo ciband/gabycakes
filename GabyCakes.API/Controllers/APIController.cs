@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using GabyCakes.API.Models;
+using GabyCakes.API.Services;
 
 namespace GabyCakes.API.Controllers
 {
@@ -10,22 +12,64 @@ namespace GabyCakes.API.Controllers
     [Route("api")]
     public class APIController : Controller
     {
-        [HttpGet("products")]
-        public IEnumerable<string> GetProducts()
+        private readonly IProductService _productService;
+
+        public APIController(IProductService productService)
         {
-            return new string[] { "value1", "value2" };
+            _productService = productService;
+        }
+
+        [HttpGet("products")]
+        public IActionResult GetProducts()
+        {
+            return getProducts(_productService.GetProducts);
+        }
+
+        [HttpGet("products/cupcakes")]
+        public IActionResult GetCupcakes()
+        {
+            return getProducts(_productService.GetCupcakes);
+        }
+        [HttpGet("products/cakes")]
+        public IActionResult GetCakes()
+        {
+            return getProducts(_productService.GetCakes);
+        }
+        [HttpGet("products/brownies")]
+        public IActionResult GetBrownies()
+        {
+            return getProducts(_productService.GetBrownies);
+        }
+        [HttpGet("products/cookies")]
+        public IActionResult GetCookies()
+        {
+            return getProducts(_productService.GetCookies);
         }
 
         [HttpGet("taxonomies")]
-        public IEnumerable<string> GetTaxonomies()
+        public IActionResult GetTaxonomies()
         {
-            return new string[] { "value1", "value2" };
+            return getProducts(_productService.GetTaxonomies);
         }
 
         [HttpGet("product/{id}")]
-        public string GetProduct(int id)
+        public IActionResult GetProduct(int id)
         {
-            return "value";
+            return getProducts(_productService.GetTaxonomies, NotFound());
+        }
+
+        private IActionResult getProducts<T>(Func<T> getProductsFunc) where T : class
+        {
+            return getProducts(getProductsFunc, NoContent());
+        }
+        private IActionResult getProducts<T>(Func<T> getProductsFunc, StatusCodeResult result) where T : class
+        {
+            var products = getProductsFunc();
+            if (products != null)
+            {
+                return Ok(products);
+            }
+            return result;
         }
 
         // POST api/values
