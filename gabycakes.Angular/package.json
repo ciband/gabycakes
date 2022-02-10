@@ -59,7 +59,7 @@
     "karma-jasmine": "^1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "ngrx-store-freeze": "^0.1.9",
-    "node-sass": "^4.5.0",
+    "node-sass": "^7.0.0",
     "nswag": "10.6.0",
     "protractor": "^5.1.1",
     "raw-loader": "^0.5.1",
